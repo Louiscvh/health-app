@@ -16,8 +16,8 @@ export const   Header = () => {
     const {user, logout} = useAuth();
     const navigate = useNavigate();
 
-    const handleLogout = async () => {
-        await logout();
+    const handleLogout = () => {
+        logout();
         navigate('/login');
         toast.success('Logged out successfully');
     }

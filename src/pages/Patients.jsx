@@ -39,7 +39,7 @@ export const Patients = () => {
                 {patients?.map((patient) => {
                     if(patient.height !== null)
                     return <li key={patient.id}>
-                        <Link to={`/patient/${patient.id}`} className="bg-muted p-4 rounded-lg shadow flex transition gap-4 hover:bg-muted-foreground">
+                        <Link to={`/patient/${patient.id}`} className="bg-muted hover:-translate-y-1 p-4 rounded-lg shadow flex transition gap-4 hover:bg-muted-foreground">
                             <img className="size-8 object-cover rounded-sm" src={patient?.sex === 1 ? "https://www.toutelasignaletique.com/21032-thickbox_default/plaque-porte-picto-alu-decoupe-symbole-homme-5-couleurs-au-choix.jpg" : "https://www.toutelasignaletique.com/21028-large_default/plaque-porte-picto-alu-decoupe-symbole-femme-5-coloris-au-choix.jpg"} />
                             <div>
                                 <h2 className="text-xl font-bold">{patient.firstname} {patient.lastname}</h2>
